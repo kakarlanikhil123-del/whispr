@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>whispr – podcast platform (demo)</title>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="top">
+      <a class="logo" href="#top">◉ whispr</a>
+      <button class="burger" id="burger" aria-label="Menu">☰</button>
+      <nav id="menu">
+        <a href="#about">About us</a><a href="#episodes">Provide</a><a href="#creators">Top Creators</a
+        ><a href="#join">Let's Join Us</a> <button class="btn ghost" id="signup">Sign Up</button
+        ><button class="btn fill" id="login">Login</button>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero" id="top">
+        <h1>Listen to <em>some</em> fun talks!</h1>
+        <div class="figure" aria-hidden="true"></div>
+        <p class="tagline">Every voice really matters!</p>
+        <div class="swirl">
+          <aside class="members">
+            <small>Our Members</small>
+            <div class="faces">
+              <i style="background: #e8623a">A</i><i style="background: #3b9ed9">B</i
+              ><i style="background: #f0b44a">C</i><b>+10k</b>
+            </div>
+            <div class="big" id="listeners">100K+</div>
+            <small>Monthly Listeners (sample number)</small>
+          </aside>
+        </div>
+      </section>
+
+      <section id="about" class="about">
+        <h2>About whispr</h2>
+        <p>
+          whispr is a fictional podcast platform created for a demonstration project. All shows, creators and
+          numbers are sample data. The player below simulates playback; it does not play real audio.
+        </p>
+      </section>
+
+      <section id="episodes">
+        <h2>Fun talks</h2>
+        <div class="tools">
+          <input id="q" placeholder="Search episodes" aria-label="Search episodes" />
+          <select id="cat" aria-label="Category"></select>
+          <select id="sort" aria-label="Sort">
+            <option value="new">Newest</option>
+            <option value="pop">Most popular</option>
+            <option value="short">Shortest</option>
+          </select>
+        </div>
+        <div class="eps" id="eps"></div>
+      </section>
+
+      <section id="creators">
+        <h2>Top creators</h2>
+        <div class="creators" id="creatorList"></div>
+      </section>
+
+      <section id="studio">
+        <h2>Studio snapshots</h2>
+        <p class="hint">Upload photos from your studio or episodes.</p>
+        <div id="gallery"></div>
+      </section>
+
+      <section id="join" class="join">
+        <h2>Let's join us</h2>
+        <p>Get early access to new shows. Demo form, nothing is sent.</p>
+        <form id="joinForm" novalidate>
+          <input id="joinEmail" type="email" placeholder="Your email" aria-label="Email" /><button
+            class="btn fill"
+          >
+            Join
+          </button>
+        </form>
+        <small id="joinMsg" role="status"></small>
+      </section>
+    </main>
+
+    <div class="player" id="player" hidden>
+      <button id="pp" aria-label="Play or pause">▶</button>
+      <div class="pinfo">
+        <b id="pTitle"></b>
+        <div class="pbar"><i id="pFill"></i></div>
+      </div>
+      <span id="pTime"></span><button id="pClose" aria-label="Close player">✕</button>
+    </div>
+    <footer>whispr · fictional brand for a demonstration project</footer>
+    <script src="app.js"></script>
+  </body>
+</html>
